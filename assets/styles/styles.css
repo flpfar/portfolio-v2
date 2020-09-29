@@ -69,14 +69,30 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
-.nav {
+.intro .content .socials__item:hover {
+  color: #ffb400;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.container {
+  position: relative;
+}
+
+.container .nav {
   padding: 0 1rem 1rem;
   height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.nav .menu {
+.container .nav .menu {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr 1fr;
@@ -87,11 +103,11 @@ main {
   font-weight: 900;
 }
 
-.nav .menu__item {
+.container .nav .menu__item {
   background-color: #222;
 }
 
-.nav .menu__item a {
+.container .nav .menu__item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,15 +120,49 @@ main {
           justify-content: center;
 }
 
-.nav .menu__item a:hover {
+.container .nav .menu__item a:hover {
   background-color: #333;
 }
 
-.nav .menu__item a:hover .highlight {
+.container .nav .menu__item a:hover .highlight {
   -webkit-transform: rotateX(360deg);
           transform: rotateX(360deg);
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   color: #fff;
+}
+
+.container .myprojects,
+.container .aboutme,
+.container .getintouch {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 1rem 1rem;
+  height: 100%;
+  background-color: red;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.container .closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 20px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container .hidden {
+  height: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 /*# sourceMappingURL=styles.css.map */

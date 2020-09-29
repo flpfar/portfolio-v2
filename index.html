@@ -11,42 +11,55 @@
 </head>
 <body>
   <main>
-    <section class="intro">
+    <header class="intro">
       <div class="content">
         <p>Hi there! I'm</p>
         <h1>Felipe Rosa</h1>
         <h2 class="highlight">A Software Developer</h2>
         <ul class="socials">
           <li class="socials__item">
-            <a target="_blank" href="./assets/files/feliperosa-resume.pdf" class="contact-link">
+            <a target="_blank" href="./assets/files/feliperosa-resume.pdf" title="Resume PDF" class="contact-link">
               <i class="fa fa-address-card contact-icon" aria-hidden="true" alt="Resume PDF"></i>
             </a>
           </li>
           <li class="socials__item">
-            <a target="_blank" href="https://github.com/flpfar" class="contact-link" alt="GitHub">
+            <a target="_blank" href="https://github.com/flpfar" title="GitHub" class="contact-link" alt="GitHub">
               <i class="fa fa-github contact-icon" aria-hidden="true"></i>
             </a>
           </li>
           <li class="socials__item">
-            <a target="_blank" href="https://www.linkedin.com/in/felipe-augusto-rosa" class="contact-link" alt="LinkedIn">
+            <a target="_blank" href="https://www.linkedin.com/in/felipe-augusto-rosa" title="LinkedIn" class="contact-link" alt="LinkedIn">
               <i class="fa fa-linkedin-square contact-icon" aria-hidden="true"></i>
             </a>
           </li>
           <li class="socials__item">
-            <a target="_blank" href="mailto:flp.far@gmail.com" class="contact-link" alt="Email">
+            <a target="_blank" href="mailto:flp.far@gmail.com" class="contact-link" title="Email" alt="Email">
               <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
             </a>
           </li>
         </ul>
       </div>
-    </section>
-    <nav class="nav">
-      <ul class="menu">
-        <li class="menu__item"><a href="#"><span class="flip">My</span> &nbsp;<span class="highlight">Projects</span></a></li>
-        <li class="menu__item"><a href="#">About &nbsp;<span class="highlight">Me</span></a></li>
-        <li class="menu__item"><a href="#">Get &nbsp;<span class="highlight">in touch</span></a></li>
-      </ul>
-    </nav>
+    </header>
+    <div class="container">
+      <nav class="nav">
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="myprojects__link"><span class="flip">My</span> &nbsp;<span class="highlight">Projects</span></a></li>
+          <li class="menu__item"><a href="#" class="aboutme__link">About &nbsp;<span class="highlight">Me</span></a></li>
+          <li class="menu__item"><a href="#" class="getintouch__link">Get &nbsp;<span class="highlight">in touch</span></a></li>
+        </ul>
+      </nav>
+      <section class="myprojects page hidden">
+        My PROJECTS
+      </section>
+      <section class="aboutme page hidden">
+        ABOUT ME
+      </section>
+      <section class="getintouch page hidden">
+        GET IN TOUCH
+      </section>
+      <button class="closeButton hidden">X</button>
+    </div>
   </main>
+  <script src="index.js" />
 </body>
 </html>

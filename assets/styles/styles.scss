@@ -50,43 +50,86 @@ main {
 
       &__item {
         flex: 1;
+        transition-duration: 0.5s;
+      }
+
+      &__item:hover {
+        color: $color-font-secondary;
+        transform: scale(1.5);
+        transition-duration: 0.5s;
       }
     }
   }
 }
 
-.nav {
-  padding: 0 1rem 1rem;
-  height: 100%;
+.container {
+  position: relative;
 
-  .menu {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+  .nav {
+    padding: 0 1rem 1rem;
     height: 100%;
-    font-size: 1.2rem;
-    font-weight: 900;
+    transition: 1s;
 
-    &__item {
-      background-color: $color-bg-secondary;
+    .menu {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 1rem;
+      height: 100%;
+      font-size: 1.2rem;
+      font-weight: 900;
 
-      a {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-      }
+      &__item {
+        background-color: $color-bg-secondary;
 
-      a:hover {
-        .highlight {
-          transform: rotateX(360deg);
-          transition-duration: 1s;
-          color: $color-font-primary;
+        a {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
         }
 
-        background-color: #333;
+        a:hover {
+          .highlight {
+            transform: rotateX(360deg);
+            transition-duration: 1s;
+            color: $color-font-primary;
+          }
+
+          background-color: #333;
+        }
       }
     }
   }
-}
 
+  .myprojects,
+  .aboutme,
+  .getintouch {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 1rem 1rem;
+    height: 100%;
+    background-color: red;
+    transition: 1s;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 20px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .hidden {
+    height: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    transition: 1s;
+  }
+}
