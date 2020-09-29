@@ -103,4 +103,16 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.nav .menu__item a:hover {
+  background-color: #333;
+}
+
+.nav .menu__item a:hover .highlight {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  color: #fff;
+}
 /*# sourceMappingURL=styles.css.map */

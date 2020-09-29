@@ -76,6 +76,17 @@ main {
         align-items: center;
         justify-content: center;
       }
+
+      a:hover {
+        .highlight {
+          transform: rotateX(360deg);
+          transition-duration: 1s;
+          color: $color-font-primary;
+        }
+
+        background-color: #333;
+      }
     }
   }
 }
+
