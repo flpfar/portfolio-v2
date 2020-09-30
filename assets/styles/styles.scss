@@ -2,6 +2,7 @@ $color-bg-primary: #111;
 $color-bg-secondary: #222;
 $color-font-primary: #fff;
 $color-font-secondary: #ffb400;
+$breakpoint-desktop: 992px;
 
 main {
   height: 100vh;
@@ -20,8 +21,8 @@ main {
 
 .intro {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 3rem 0;
 
   .content {
@@ -33,6 +34,10 @@ main {
     height: 100%;
     font-size: 1.2rem;
 
+    .picture {
+      display: none;
+    }
+
     h1 {
       font-size: 2rem;
       font-weight: 900;
@@ -42,33 +47,34 @@ main {
       font-size: 1.5rem;
       font-weight: 900;
     }
+  }
 
-    .socials {
-      display: flex;
-      width: 60%;
-      font-size: 1.4rem;
+  .socials {
+    display: flex;
+    width: 60%;
+    font-size: 1.4rem;
+    text-align: center;
 
-      &__item {
-        flex: 1;
-        transition-duration: 0.5s;
-      }
+    &__item {
+      flex: 1;
+      transition-duration: 0.5s;
+    }
 
-      &__item:hover {
-        color: $color-font-secondary;
-        transform: scale(1.5);
-        transition-duration: 0.5s;
-      }
+    &__item:hover {
+      color: $color-font-secondary;
+      transform: scale(1.5);
+      transition-duration: 0.5s;
     }
   }
 }
 
 .container {
   position: relative;
+  padding: 1rem;
 
   .nav {
-    padding: 0 1rem 1rem;
     height: 100%;
-    transition: 1s;
+    transition: height 0.6s;
 
     .menu {
       display: grid;
@@ -105,14 +111,14 @@ main {
   .aboutme,
   .getintouch {
     position: absolute;
+    padding: 1rem;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0 1rem 1rem;
     height: 100%;
-    background-color: red;
-    transition: 1s;
+    background-color: $color-bg-secondary;
+    transition: 0.6s;
   }
 
   .closeButton {
@@ -123,6 +129,7 @@ main {
     border: none;
     text-align: center;
     cursor: pointer;
+    transition: 1s;
   }
 
   .hidden {
@@ -130,6 +137,36 @@ main {
     padding: 0;
     border: none;
     overflow: hidden;
-    transition: 1s;
+    transition: 0.6s;
+  }
+}
+
+/* Media Queries */
+
+@media screen and (min-width: $breakpoint-desktop) {
+  main {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .intro {
+    .content {
+      justify-content: center;
+
+      .picture {
+        display: block;
+        margin: -3rem 0 2rem;
+        width: 150px;
+        border-radius: 50%;
+      }
+
+      h1 {
+        margin: 0.6rem 0 2rem;
+      }
+    }
+
+    .socials {
+      margin-top: auto;
+    }
   }
 }

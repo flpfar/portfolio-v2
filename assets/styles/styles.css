@@ -19,12 +19,13 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 3rem 0;
 }
 
@@ -47,6 +48,10 @@ main {
   font-size: 1.2rem;
 }
 
+.intro .content .picture {
+  display: none;
+}
+
 .intro .content h1 {
   font-size: 2rem;
   font-weight: 900;
@@ -57,15 +62,16 @@ main {
   font-weight: 900;
 }
 
-.intro .content .socials {
+.intro .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 60%;
   font-size: 1.4rem;
+  text-align: center;
 }
 
-.intro .content .socials__item {
+.intro .socials__item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -73,7 +79,7 @@ main {
           transition-duration: 0.5s;
 }
 
-.intro .content .socials__item:hover {
+.intro .socials__item:hover {
   color: #ffb400;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -83,13 +89,13 @@ main {
 
 .container {
   position: relative;
+  padding: 1rem;
 }
 
 .container .nav {
-  padding: 0 1rem 1rem;
   height: 100%;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: height 0.6s;
+  transition: height 0.6s;
 }
 
 .container .nav .menu {
@@ -136,15 +142,15 @@ main {
 .container .aboutme,
 .container .getintouch {
   position: absolute;
+  padding: 1rem;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 1rem 1rem;
   height: 100%;
-  background-color: red;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: #222;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .container .closeButton {
@@ -155,6 +161,8 @@ main {
   border: none;
   text-align: center;
   cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .container .hidden {
@@ -162,7 +170,34 @@ main {
   padding: 0;
   border: none;
   overflow: hidden;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+/* Media Queries */
+@media screen and (min-width: 992px) {
+  main {
+    -ms-grid-rows: none;
+        grid-template-rows: none;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  .intro .content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .intro .content .picture {
+    display: block;
+    margin: -3rem 0 2rem;
+    width: 150px;
+    border-radius: 50%;
+  }
+  .intro .content h1 {
+    margin: 0.6rem 0 2rem;
+  }
+  .intro .socials {
+    margin-top: auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
