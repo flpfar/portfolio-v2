@@ -56,7 +56,18 @@
         ABOUT ME
       </section>
       <section class="getintouch page hidden">
-        GET IN TOUCH
+        <h2>Get <span class="highlight">in touch</span></h2>
+        <div class="separator">
+          <span class="line"></span>
+          <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
+          <span class="line"></span>
+        </div>
+        <form class="message-form">
+          <input type="text" name="sender" id="sender" placeholder="Your name" class="message-form__input">
+          <input type="email" name="email" id="email" placeholder="Your email" class="message-form__input">
+          <textarea name="body" id="body" placeholder="Message" rows="5" class="message-form__input textarea"></textarea>
+          <input type="submit" value="Send message" class="message-form__submit">
+        </form>
       </section>
       <button class="closeButton hidden">X</button>
     </div>

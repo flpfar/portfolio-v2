@@ -2,6 +2,7 @@ $color-bg-primary: #111;
 $color-bg-secondary: #222;
 $color-font-primary: #fff;
 $color-font-secondary: #ffb400;
+$color-font-secondary-transparent: rgba(255, 180, 0, 0.2);
 $breakpoint-desktop: 992px;
 
 main {
@@ -9,10 +10,9 @@ main {
   width: 100vw;
   background-color: $color-bg-primary;
   color: $color-font-primary;
-  text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   display: grid;
-  grid-template-rows: 3fr 4fr;
+  grid-template-rows: 3fr 5fr;
 }
 
 .highlight {
@@ -24,6 +24,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 3rem 0;
+  text-transform: uppercase;
 
   .content {
     display: flex;
@@ -75,6 +76,7 @@ main {
   .nav {
     height: 100%;
     transition: height 0.6s;
+    text-transform: uppercase;
 
     .menu {
       display: grid;
@@ -119,6 +121,58 @@ main {
     height: 100%;
     background-color: $color-bg-secondary;
     transition: 0.6s;
+    overflow: hidden;
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .separator {
+      text-align: center;
+
+      .line {
+        width: 30%;
+        height: 0;
+        border: 1px solid $color-font-secondary-transparent;
+        display: inline-block;
+        margin: 0.2rem;
+      }
+    }
+  }
+
+  .getintouch {
+    .message-form {
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+
+      &__input {
+        background-color: $color-bg-primary;
+        color: $color-font-primary;
+        border: none;
+        border-bottom: 1px solid $color-font-secondary-transparent;
+        margin: 0.2rem 0;
+        padding: 0.6rem;
+        font-size: 0.8rem;
+      }
+
+      .textarea {
+        font-size: 0.8rem;
+        resize: vertical;
+      }
+
+      &__submit {
+        background-color: $color-font-secondary;
+        border: none;
+        margin-top: 0.5rem;
+        padding: 0.6rem;
+        cursor: pointer;
+      }
+    }
   }
 
   .closeButton {
@@ -167,6 +221,14 @@ main {
 
     .socials {
       margin-top: auto;
+    }
+  }
+
+  .container {
+    .nav {
+      .menu {
+        font-size: 1.8rem;
+      }
     }
   }
 }
