@@ -62,14 +62,17 @@
           <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
           <span class="line"></span>
         </div>
-        <form class="message-form">
+        <form action="https://mailthis.to/feliperosa" method="POST" encType="multipart/form-data" class="message-form">
           <input type="text" name="sender" id="sender" placeholder="Your name" class="message-form__input">
           <input type="email" name="email" id="email" placeholder="Your email" class="message-form__input">
           <textarea name="body" id="body" placeholder="Message" rows="5" class="message-form__input textarea"></textarea>
+          <input type="hidden" name="_subject" value="Portfolio Contact Form">
+          <input type="hidden" name="_honeypot" value="">
+          <input type="hidden" name="_confirmation" value="Thank you for getting in touch!">
           <input type="submit" value="Send message" class="message-form__submit">
         </form>
       </section>
-      <button class="closeButton hidden">X</button>
+      <button class="close-button hidden"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
     </div>
   </main>
   <script type="text/javascript" src="index.js"></script>
