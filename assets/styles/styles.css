@@ -181,8 +181,31 @@ main {
   margin: 0.2rem;
 }
 
-.container .getintouch .message-form {
+.container .myprojects .content,
+.container .aboutme .content,
+.container .getintouch .content {
+  border: 1px solid red;
   margin: 1rem 0;
+  height: calc(100% - 4rem);
+}
+
+.container .aboutme__intro {
+  padding: 1rem 0;
+}
+
+.container .aboutme__skills h3 {
+  color: red;
+}
+
+.container .aboutme__skills .skills {
+  background-color: red;
+}
+
+.container .aboutme__skills .skills__item {
+  color: gray;
+}
+
+.container .getintouch .message-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

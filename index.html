@@ -42,6 +42,7 @@
       </ul>
     </header>
     <div class="container">
+      <!-- NAVIGATION -->
       <nav class="nav">
         <ul class="menu">
           <li class="menu__item"><a href="#" class="myprojects__link"><span class="flip">My</span> &nbsp;<span class="highlight">Projects</span></a></li>
@@ -49,6 +50,7 @@
           <li class="menu__item"><a href="#" class="getintouch__link">Get &nbsp;<span class="highlight">in touch</span></a></li>
         </ul>
       </nav>
+      <!-- MY PROJECTS -->
       <section class="myprojects page hidden">
         <h2>My <span class="highlight">projects</span></h2>
         <div class="separator">
@@ -57,6 +59,7 @@
           <span class="line"></span>
         </div>
       </section>
+      <!-- ABOUT ME -->
       <section class="aboutme page hidden">
         <h2>About <span class="highlight">me</span></h2>
         <div class="separator">
@@ -64,7 +67,32 @@
           <i class="fa fa-id-card" aria-hidden="true"></i>
           <span class="line"></span>
         </div>
+        <div class="content">
+          <p class="aboutme__intro">
+            I’m a full-stack web developer who loves creating solutions for different kinds of problems. Nice to meet you!
+          </p>
+
+          <p class="aboutme__text">
+            I have a bachelor's degree in Computer Science, and I spent the last 6 years providing IT technical support for companies in my city, solving problems in both hardware and software.<br/>
+            For the last year, I’ve been delving deep into programming, building several projects ranging from scrapers, bots and games to portals and web applications, focusing on languages like Ruby and Javascript with frameworks like Rails and React.
+          </p>
+
+          <div class="aboutme__skills">
+            <h3>Some of my skills</h3>
+            <ul class="skills">
+              <li class="skills__item">HTML</li>
+              <li class="skills__item">CSS</li>
+              <li class="skills__item">Ruby</li>
+              <li class="skills__item">Javascript</li>
+              <li class="skills__item">Ruby on Rails</li>
+              <li class="skills__item">React</li>
+              <li class="skills__item">Tailwind</li>
+              <li class="skills__item">GitHub</li>
+            </ul>
+          </div>
+        </div>
       </section>
+      <!-- GET IN TOUCH -->
       <section class="getintouch page hidden">
         <h2>Get <span class="highlight">in touch</span></h2>
         <div class="separator">
@@ -72,7 +100,7 @@
           <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
           <span class="line"></span>
         </div>
-        <form action="https://mailthis.to/feliperosa" method="POST" encType="multipart/form-data" class="message-form">
+        <form action="https://mailthis.to/feliperosa" method="POST" encType="multipart/form-data" class="message-form content">
           <input type="text" name="sender" id="sender" placeholder="Your name" class="message-form__input">
           <input type="email" name="email" id="email" placeholder="Your email" class="message-form__input">
           <textarea name="body" id="body" placeholder="Message" rows="5" class="message-form__input textarea"></textarea>
